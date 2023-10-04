@@ -76,7 +76,7 @@ const mail = {
 
 app.post("/", function(req,res){
   const cityName = req.body.CityName
-  const url = "https://api.openweathermap.org/data/2.5/weather?q="+ cityName+"&appid=86c291fcfa8c8853ec72a059076f1a6a&units=metric"
+  const url = "https://api.openweathermap.org/data/2.5/weather?q="+ cityName+"&appid=" + process.env.APPID +"&units=metric"
   https.get(url, function(response){
     response.on("data", function(data){
       const jsondata = JSON.parse(data)
