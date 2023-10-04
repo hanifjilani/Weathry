@@ -1,0 +1,44 @@
+body {
+  background-color: #1e424e;
+  display: flex;
+  justify-content: center;
+}
+.first {
+  color: white;
+  display: inline-block;
+  position: absolute;
+  top: 2vh;
+  left: 27vw;
+}
+.second {
+  color: white;
+  display: inline-block;
+  position: absolute;
+  top: 2vh;
+  right: 27vw;
+}
+img {
+  width: 100vw;
+  height: 97vh;
+}
+.btn {
+  -webkit-border-radius: 39;
+  -moz-border-radius: 39;
+  border-radius: 39px;
+  text-shadow: 0px 0px 0px #666666;
+  font-family: Georgia;
+  color: #365c69;
+  font-size: 22px;
+  background: #57c5c2;
+  padding: 10px 20px 10px 20px;
+  text-decoration: none;
+  position:absolute;
+  bottom: 1vh;
+}
+
+.btn:hover {
+  background: #22c79e;
+  text-decoration: none;
+  position:absolute;
+  bottom: 1vh;
+}

@@ -1,0 +1,80 @@
+body {
+  background-color: #d1edf2;
+  height: 100vh;
+  margin:auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+.sun {
+  width: 50px;
+  position: absolute;
+  right: 3vh;
+  top: 5vh;
+}
+
+h1 {
+  color: hotpink;
+  font-size: 4em;
+  font-family: 'Abhaya Libre', serif;
+}
+p {
+  color: hotpink;
+  font-size: 1.5em;
+  font-family: 'Montserrat', sans-serif;
+}
+.grass {
+  position: absolute;
+  bottom: 0;
+  z-index: -2;
+}
+
+.plant1 {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+.plant2 {
+  width: 200px;
+
+  position: absolute;
+  bottom: 0;
+  left:0;
+}
+.sun {
+  width: 100px;
+  height: 100px;
+  position: absolute;
+}
+
+.back {
+  position: absolute;
+  height:auto;
+  width:auto;
+  bottom: 15%;
+}
+a:link {
+  text-decoration: none;
+  color: mediumseagreen;
+  font-size: 1.5rem;
+  transition: font-size 0.5s;
+  transition-timing-function: linear;
+}
+a:visited {
+  text-decoration: none;
+  color: mediumseagreen;
+  font-size: 1.5rem;
+  transition: font-size 2s;
+  transition-timing-function: linear;
+
+}
+a:hover {
+  text-decoration: none;
+  color: 	darkgreen;
+  font-size: 1.75rem;
+
+}
+a:active {
+  text-decoration: none;
+}

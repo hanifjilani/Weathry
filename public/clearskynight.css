@@ -1,0 +1,124 @@
+
+body {
+  height: 100vh;
+  margin:auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+html {
+  background-color: black;
+}
+.moon {
+  z-index: 5;
+  width: 200px;
+  height: 200px;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+.star1 {
+  height: 30vh;
+  width: auto;
+  position: absolute;
+  right: auto;
+  left: auto;
+  top: 0;
+}
+.star2 {
+  height: 30vh;
+  width: auto;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.star3 {
+  height: 30vh;
+  width: auto;
+  position: absolute;
+  left: 120px;
+  top: 0;
+}
+.star4 {
+  height: 30vh;
+  width: auto;
+  position: absolute;
+  top: 0;
+  left: 240px;
+}
+.star5 {
+  height: 30vh;
+  width: auto;
+  position: absolute;
+  top: 0;
+  left: 350px;
+}
+.star6 {
+  height: 30vh;
+  width: auto;
+  position: absolute;
+  top: 0;
+  right: 210px;
+}
+.star7 {
+  height: 30vh;
+  width: auto;
+  position: absolute;
+  top: 0;
+  right: 400px;
+}
+.star8 {
+  z-index: 0;
+  height: 30vh;
+  width: auto;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.text {
+  color: white;
+  font-size: 1.875rem;
+}
+.city {
+  font-style: italic;
+  font-size: 4rem;
+  color: antiquewhite;
+}
+h1 {
+  font-family: 'Abhaya Libre', serif;
+}
+.description {
+  	color: 	white;
+    font-family: 'Montserrat', sans-serif;
+
+}
+.back {
+  position: absolute;
+  height:auto;
+  width:auto;
+  bottom: 15%;
+}
+a:link {
+  text-decoration: none;
+  color: #f0ffff;
+  font-size: 1.5rem;
+  transition: font-size 0.5s;
+  transition-timing-function: linear;
+}
+a:visited {
+  text-decoration: none;
+  color: #f0ffff;
+  font-size: 1.5rem;
+  transition: font-size 2s;
+  transition-timing-function: linear;
+
+}
+a:hover {
+  text-decoration: none;
+  color: #f5fffa;
+  font-size: 1.75rem;
+
+}
+a:active {
+  text-decoration: none;
+}

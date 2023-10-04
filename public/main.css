@@ -1,0 +1,327 @@
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+.footerHeading {
+  font-size: 1.5rem;
+  color: rgb(184,115,51);
+  margin-bottom: 5px;
+}
+.footer {
+  font-family: 'Roboto', sans-serif;
+  width: 100vw;
+  height: 20vh;
+  position: absolute;
+  bottom: -15vh;
+  z-index: 10;
+  background-color: #264348;
+}
+.footer ul  {
+  list-style: none;
+  margin-left: 45%;
+}
+.footer ul a {
+  color: white;
+  text-decoration: none;
+  transition: transform 0.5s;
+}
+.footer ul a:hover {
+  color: #e75480;
+}
+.navBarDiv {
+  margin-top: 5vh;
+  font-family: 'Roboto', sans-serif;
+  color: white;
+  width: 100vw;
+  height: 10vh;
+  position: absolute;
+  top: 0;
+  z-index: 10;
+}
+.navBarDiv ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+}
+.navBarDiv ul a {
+  margin: 0 3vw;
+  text-decoration: none;
+  color: white;
+  transition: transform 0.5s;
+}
+.navBarDiv ul a:hover {
+  transform: scale(1.2);
+}
+.clearskyday {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 20vw;
+  font-family: 'Roboto', sans-serif;
+  background-color: #d1edf2;
+  color: rgba(255, 105, 180, 0.5);
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+.plant {
+  width: 20vw;
+  position: absolute;
+  bottom: 0;
+}
+.sun {
+  width: 100px;
+  position: absolute;
+  top: 0;
+}
+.hideclearskyday {
+  z-index: 5;
+  font-size: 2rem;
+  visibility: hidden;
+}
+.clearskyday:hover > .hideclearskyday {
+  visibility: visible;
+  animation: fadeIn 1s;
+}
+
+
+
+/* --------------------------------------------snow -----------------------------------*/
+.snow {
+  z-index: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(255, 182, 193);
+  font-family: 'Roboto', sans-serif;
+  height: 100vh;
+  width: 20vw;
+  color: rgba(0, 126, 54, 0.5);
+  position: absolute;
+  left: 60vw;
+  top: 0;
+}
+.snow > img {
+  z-index: 0;
+  height: auto;
+  width: 20vw;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.hidesnow {
+  z-index: 5;
+  font-size: 2rem;
+  visibility: hidden;
+}
+.snow:hover > .hidesnow {
+  visibility: visible;
+  animation: fadeIn 1s;
+}
+
+
+
+/*-----------------------------------------clouds------------------------------------------------- */
+.clouds {
+  z-index: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(173, 216, 230, 0.5);
+  font-family: 'Roboto', sans-serif;
+  height: 100vh;
+  width: 20vw;
+  color: #FFFDD0;
+  position: absolute;
+  left: 40vw;
+  top: 0;
+}
+.cloud1 {
+  position: absolute;
+  top: 5vh;
+  right: 3vw;
+}
+.cloud2 {
+  position: absolute;
+  top: 15vh;
+  right: 9vw;
+}
+.cloud3 {
+  position: absolute;
+  right: 0;
+  top: 25vh;
+}
+.hidecloud {
+  z-index: 5;
+  font-size: 2rem;
+  visibility: hidden;
+}
+.clouds:hover > .hidecloud {
+  visibility:visible;
+  animation: fadeIn 1s;
+}
+
+/* --------------------------------------------------------------thunder----------------------------------------------- */
+.thunder {
+  z-index: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 20vw;
+  color: rgba(255, 223, 0, 0.5);
+  font-family: 'Roboto', sans-serif;
+  position: absolute;
+  left: 20vw;
+  top: 0;
+}
+.thunder > img {
+  height: 100vh;
+  width: 20vw;
+  z-index: 0;
+  position:absolute;
+  top:0;
+  left:0;
+}
+.hidethunder {
+  z-index: 5;
+  font-size: 2rem;
+  visibility: hidden;
+}
+.thunder:hover > .hidethunder {
+  visibility: visible;
+  animation: fadeIn 1s;
+}
+/* ------------------------------------------------------------ rain------------------------------------------------------- */
+.rain {
+  z-index: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 20vw;
+  height: 100vh;
+  background-color: #fdcfdf;
+  font-family: 'Roboto', sans-serif;
+  color: #999999;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.rain > img {
+  height: 100vh;
+  width: 20vw;
+  z-index: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.hide {
+  z-index: 5;
+  font-size: 2rem;
+  visibility: hidden;
+}
+.rain:hover > .hide{
+  visibility: visible;
+  animation: fadeIn 1s;
+}
+/* ------------------------------------------------------------- Form Stuff --------------------------------------------------------------- */
+body {
+  z-index: -20;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+form {
+  z-index: 10;
+  margin-top: 55vh;
+  width: auto;
+  height: 15vh;
+}
+input[type=text] {
+  border: 3px solid #D3D3D3;
+  outline: none;
+  z-index: 15;
+  width: 220px;
+  height: 30px;
+  font-size: 1.30rem;
+  font-family: 'Abhaya Libre', serif;
+}
+input[type=submit] {
+  height: 35px;
+  width: auto;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+}
+input[type=submit]:hover {
+  background-color: #46a049;
+}
+input[type=text]:focus {
+
+  background-color: #fff0f5;
+  border: 3px solid #555;
+}
+h1 {
+  font-family: 'Sacramento', cursive;
+  z-index: 20;
+  font-size: 4rem;
+  color: rgb(148, 0, 211);
+  position: absolute;
+  top: 30%;
+}
+
+/* From here it is normal code */
+@media only screen and (max-width: 480px) {
+  .navBarDiv {
+    margin-top: 2vh;
+    width: 90vw;
+  }
+  .clouds , .thunder {
+    display: none;
+  }
+  .rain , .clearskyday , .snow {
+    width: 33.3vw;
+  }
+  .snow {
+    position: absolute;
+    left: 33vw;
+  }
+
+  h1 {
+    font-size: 2.5rem;
+    margin-top: 10vh;
+  }
+  .navBarDiv ul {
+    justify-content: space-between;
+    padding: 0;
+  }
+  .plant {
+    width: 35vw;
+  }
+  .snow > img {
+    width: 40vw;
+    margin-top: 10vh;
+  }
+  .rain > img {
+    width: 30vw;
+  }
+  .footer ul {
+    margin-left: 25%;
+  }
+}
+@media only screen and (max-width: 320px) {
+  h1 {
+    font-size: 2.3rem;
+    margin-top: 20vh;
+  }
+  input[type=text] {
+    width: 200px;
+  }
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}

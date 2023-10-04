@@ -1,0 +1,67 @@
+body {
+  background: url("https://media1.giphy.com/media/13QCrvGE0wwdYIy5P5/giphy.webp?cid=ecf05e47ail19nidn7s6911wz5p85x25wgjvm18xbe0ohn3w&rid=giphy.webp") repeat center fixed;
+  background-size: contain;
+  height: 100vh;
+  margin:auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+.city {
+  font-style: italic;
+  font-size: 4rem;
+  color: 	#778899;
+}
+h1 {
+  color: #696969;
+  font-size: 4em;
+  font-family: 'Abhaya Libre', serif;
+}
+p {
+  color: 	#808080;
+  font-size: 1.75em;
+  font-family: 'Montserrat', sans-serif;
+}
+
+img {
+  display: block;
+  margin-right: auto;
+  width: 100px;
+}
+html {
+  background: url("https://media3.giphy.com/media/WsGSFcQ2TztqqjFmR8/giphy.gif?cid=ecf05e473c5e51c716ea86398886980d91bca540fab159af&rid=giphy.gif") repeat center fixed;
+  background-size: contain;
+  background-color: pink;
+}
+
+.back {
+  position: absolute;
+  height:auto;
+  width:auto;
+  bottom: 15%;
+}
+a:link {
+  text-decoration: none;
+  color: #67C8FF;
+  font-size: 1.5rem;
+  transition: font-size 0.5s;
+  transition-timing-function: linear;
+}
+a:visited {
+  text-decoration: none;
+  color: #67C8FF;
+  font-size: 1.5rem;
+  transition: font-size 2s;
+  transition-timing-function: linear;
+
+}
+a:hover {
+  text-decoration: none;
+  color: 	#3299CC;
+  font-size: 1.75rem;
+
+}
+a:active {
+  text-decoration: none;
+}

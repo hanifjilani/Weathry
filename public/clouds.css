@@ -1,0 +1,93 @@
+body {
+  background-color: skyblue;
+  height: 100vh;
+  margin:auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.cloud1 {
+  position: absolute;
+  top: 5%;
+  left: 20%;
+}
+
+
+.cloud2 {
+  position: absolute;
+  top:10%;
+  left: 5%;
+}
+.cloud3 {
+  position: absolute;
+  top:10%;
+  right: 5%;
+
+}
+.cloud4 {
+  position: absolute;
+  top: 5%;
+  right: 15%;
+}
+.cloud5 {
+  position: absolute;
+  top:5%;
+  right:30%;
+}
+
+.text {
+  color: #FFFDD0;
+  font-size: 1.875rem;
+}
+.city {
+  font-style: italic;
+  font-size: 4rem;
+  color: 	#f5f1a4;
+}
+h1 {
+  font-family: 'Abhaya Libre', serif;
+}
+.description {
+  	color: 	#778899;
+    font-family: 'Montserrat', sans-serif;
+
+}
+
+.icon {
+  display: block;
+  margin-right: auto;
+  width: 100px;
+
+}
+.back {
+  position: absolute;
+  height:auto;
+  width:auto;
+  bottom: 15%;
+}
+a:link {
+  text-decoration: none;
+  color: #ff1493;
+  font-size: 1.5rem;
+  transition: font-size 0.5s;
+  transition-timing-function: linear;
+}
+a:visited {
+  text-decoration: none;
+  color: #ff1493;
+  font-size: 1.5rem;
+  transition: font-size 2s;
+  transition-timing-function: linear;
+
+}
+a:hover {
+  text-decoration: none;
+  color: #ff69b4;
+  font-size: 1.75rem;
+
+}
+a:active {
+  text-decoration: none;
+}

@@ -1,0 +1,61 @@
+body {
+  height: 100vh;
+  margin:auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+
+h1 {
+  color: #7DF9FF;
+  font-size: 4em;
+  font-family: 'Abhaya Libre', serif;
+}
+p {
+  color: #7DF9FF;
+  font-size: 1.5em;
+  font-family: 'Montserrat', sans-serif;
+}
+
+img {
+  display: block;
+  margin-right: auto;
+  width: 100px;
+}
+html {
+  background: url("https://media1.giphy.com/media/5QXkoDtmD8NGi7MuFP/giphy.gif?cid=ecf05e4735819f824554a62b3d51f549978fbebf8d98443a&rid=giphy.gif") no-repeat center fixed;
+  background-size: cover;
+}
+
+.back {
+  position: absolute;
+  height:auto;
+  width:auto;
+  bottom: 15%;
+}
+a:link {
+  text-decoration: none;
+  color: #FFDF00;
+  font-size: 1.5rem;
+  transition: font-size 0.5s;
+  transition-timing-function: linear;
+}
+a:visited {
+  text-decoration: none;
+  color: #FFDF00;
+  font-size: 1.5rem;
+  transition: font-size 2s;
+  transition-timing-function: linear;
+
+}
+a:hover {
+  text-decoration: none;
+  color: 	#FFEFD5;
+  font-size: 1.75rem;
+
+}
+a:active {
+  text-decoration: none;
+}

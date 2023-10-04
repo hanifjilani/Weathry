@@ -1,0 +1,71 @@
+
+body {
+  height: 100vh;
+  margin:auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+html {
+  background: url("https://media1.giphy.com/media/13QCrvGE0wwdYIy5P5/giphy.webp?cid=ecf05e47ail19nidn7s6911wz5p85x25wgjvm18xbe0ohn3w&rid=giphy.webp") repeat center fixed;
+  background-size: contain;
+  background-color: #fdcfdf;
+
+}
+.text {
+  color: #999999;
+  font-size: 1.875rem;
+}
+.city {
+  font-style: italic;
+  font-size: 4rem;
+  color: 	#778899;
+}
+h1 {
+  font-family: 'Abhaya Libre', serif;
+}
+.description {
+  	color: 	#778899;
+    font-family: 'Montserrat', sans-serif;
+
+}
+
+img {
+  display: block;
+  margin-right: auto;
+  width: 100px;
+
+}
+
+
+
+.back {
+  position: absolute;
+  height:auto;
+  width:auto;
+  bottom: 15%;
+}
+a:link {
+  text-decoration: none;
+  color: #2F4F4F;
+  font-size: 1.5rem;
+  transition: font-size 0.5s;
+  transition-timing-function: linear;
+}
+a:visited {
+  text-decoration: none;
+  color: #2F4F4F;
+  font-size: 1.5rem;
+  transition: font-size 2s;
+  transition-timing-function: linear;
+
+}
+a:hover {
+  text-decoration: none;
+  color: #696969;
+  font-size: 1.75rem;
+
+}
+a:active {
+  text-decoration: none;
+}

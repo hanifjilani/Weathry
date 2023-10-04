@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog - HanifProjects.com</title>
+    <meta name="description" content="DialogFlow and Google Sheets Integration. This blog teaches you how to integrate Google sheets and dialogflow without inline editor using nodejs. Also contains two youtube videos for clarification.">
+    <meta name="keywords" content="DialogFlow,google sheets,nodejs">
+    <meta name="robots" content="index,follow">
+    <meta name="DC.title" content="Integrate dialogflow with Google Sheets using nodejs">
+    <link rel="stylesheet" href="blog.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@900&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <div class="navBarDiv">
+      <ul>
+        <a href="/"><li><b>Home</b></li></a>
+        <a href="/about"><li><b>About Me</b></li></a>
+        <a href="/blog"><li><b>Blog</b></li></a>
+        <a href="/contact"><li><b>Contact Me</b></li></a>
+      </ul>
+    </div>
+    <div class="row">
+    <div class="col s12 m10 l8 push-l2 push-m1 top">
+      <div class="card">
+        <div class="card-content">
+          <p class="title">DialogFlow Chatbot Tutorial: How to connect google sheets with dialogflow using Nodejs!</p>
+          <p>Have a small scale database in your Google Sheets? Do you find it diffucult to integrate it with your dialogflow chatbot. Don't worry
+          you have come to the right place. Full explanatory video with more info than blog is available at the end!</p>
+          <p class="title title2" id="step1">Step 1: Get the sheet's link</p>
+          <p>1.Go to your google sheets. <a href="https://sheets.google.com" target="_blank">Click here</a></p>
+          <p>2.Select the google sheet you want to integrate</p>
+          <p>3.Click on share</p> <br>
+          <img src="img/shareBlog.PNG" alt="How to share in Google Sheets"><br><br>
+          <p>4.Then you will get this. Click on Change</p><br>
+          <img src="img/afterShareBlog.PNG" alt="Share option in Google Sheets"> <br> <br>
+          <p>5.Change it from viewer to editor. Also change restricted to anyone with the link. Then copy the link.</p><br>
+          <img src="img/correctShareBlog.PNG" alt="Correct Share Setting For Google Sheets Integration"><br><br>
+          <p class="title">Step 2: Convert Sheets to Google Sheets Api (REST API)</p>
+          <p>1.Go to <a href="https://www.sheetdb.io" target="_blank">sheetdb.io</a></p>
+          <p>2.Click on Log In Using Google Account and use your google account to login in</p><br>
+          <img src="img/sheetdbLogin.PNG" alt="SheetDB.io Login Button Location"><br><br>
+          <p>3.Click on the create new button</p><br>
+          <img src="img/sheetdbCreate.PNG" alt="SheetDB.io Create New Api button"><br><br>
+          <p>4.Now paste the link you got using <a href="#step1">step 1 of this blog</a>. Then click on Create Api.</p><br>
+          <img src="img/sheetdbApiCreate.PNG" alt="SheetDB.io Create New Api"><br><br>
+          <p>5.The link highlighted below is the API Link. Click on it to copy it.</p><br>
+          <img src="img/sheetdbApiLink.PNG" alt="SheetDB.io Api Link"><br><br>
+          <p class="title">Step 3: Write the required functionality with Nodejs (You must know nodejs for this!)</p>
+          <p>1.Intialize the nodejs App.</p>
+          <p>2.Install express, request-promise-native, dialogflow-fulfillment and actions-on-google. Note: <a href="https://youtu.be/iLi7BHTpmnA" target="_blank">Click here</a> for a video on how to do this and all the other things in this blog</p>
+          <p>3.Require everything in nodejs app except actions-on-google</p>
+          <p>4.I have implemented a simple program which is given below. Please read it. I will elaborate on important parts of this code.</p>
+          <pre style="text-align: left;color: #8F7E4F; max-width: 100%;" class="happy">
+const express = require("express");
+const app = express();
+const rp = require('request-promise-native');
+const bodyParser = require("body-parser");
+const dfff = require("dialogflow-fulfillment");
+app.use(bodyParser.urlencoded({extended: true}));
+
+
+app.get("/", function(req,res){
+  res.send("We are working by the will of Allah!");
+})
+
+app.post("/", express.json(), function(request,response){
+  dialogflow(request,response);
+})
+const dialogflow = (request, response) => {
+  const agent = new dfff.WebhookClient({request,response})
+  function demo(agent){
+    var name = request.body.queryResult.parameters.Name
+    var url = "https://sheetdb.io/api/v1/b0kc0kkw8bfxa/search?name="+ name
+    return rp.get(url)
+      .then( jsonBody => {
+        var body = JSON.parse(jsonBody);
+        var id = body[0].id
+        var comment = body[0].comment
+        var age = body[0].age
+        agent.add("so the id is " + id + " and his comment is "
+                  + comment +  " and his age is" + age);
+      }).catch(err =>{
+        agent.add("Sorry Error Occurred")
+      })
+    }
+    let intentMap = new Map();
+    intentMap.set('webhookDemo',demo)
+    agent.handleRequest(intentMap)
+}
+app.listen(3000, function(){
+  console.log("only by the will of Allah !!");
+})
+</pre>
+<p>Important Points about the code:</p>
+<p>1.A lot of this is just syntax and nothing to understand. Real code starts from function demo</p>
+<p>2.The variable name is obtained from what the user types in dialogflow.(The name is a parameter of a dialogflow intent)</p>
+<p>3.Click here for the docs of sheetdb.io. Once you read it, you will understand the url part of the code.</p>
+<p>4.I use rp module to make GET request and i parse the body that i get.</p>
+<p>5.agent.add is used to reply to the user using dialogflow chatbot.</p>
+<p>6.intentMap is used to map a particular intent to a particular nodejs function. Eg: webhookDemo is intent and is maped to demo function</p>
+<p>app.listen is used to turn on the server in a particular port. Eg: 3000</p>
+<p class="title title2">Step 4: Use ngrok to get public link for our nodejs app</p>
+<p>1.Go to <a href="https://ngrok.com/" target="_blank">ngrok.com</a></p>
+<p>2.Install it and type ngrok.exe http "portNumber". Eg: ngrok.exe http 3000</p><br>
+<img src="img/ngrokExample1.PNG" alt="Ngrok Example 1"><br><br>
+<p>3.Copy the link shown below and paste it in the fulfillment place in dialogflow</p><br>
+<img src="img/ngrokExample2.PNG" alt="Ngrok Example 2"><br><br>
+<p>4.Enable webhook and paste the ngrok link in the place shown below.</p><br>
+<img src="img/dialogflowLink.PNG" alt="DialogFlow fulfillment Link Location"><br><br>
+<p>5.Done!!!</p>
+<p class="title">Video of the step 1,2 along with dialogflow chatbot creation!(dialogflow part not in blog)</p>
+<iframe width="100%" height="430" src="https://www.youtube.com/embed/YFE3S_O_cUY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><br><br>
+<p class="title">Video of the coding part!</p>
+<iframe width="100%" height="430" src="https://www.youtube.com/embed/iLi7BHTpmnA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="footer">
+    <ul>
+      <li class="footerHeading">Other Pages</li>
+      <li>Social Media</li>
+      <li>Blog</li>
+      <li>Privacy Policy</li>
+      <li>Terms & Conditions</li>
+    </ul>
+  </div>
+  </body>
+</html>

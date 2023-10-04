@@ -1,0 +1,61 @@
+body {
+  height: 100vh;
+  margin:auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+
+h1 {
+  color: #FFDF00;
+  font-size: 4em;
+  font-family: 'Abhaya Libre', serif;
+}
+p {
+  color: #FFDF00;
+  font-size: 1.5em;
+  font-family: 'Montserrat', sans-serif;
+}
+
+img {
+  display: block;
+  margin-right: auto;
+  width: 100px;
+}
+html {
+  background: url("img/sandstorm.jpg") no-repeat center fixed;
+  background-size: cover;
+}
+
+.back {
+  position: absolute;
+  height:auto;
+  width:auto;
+  bottom: 15%;
+}
+a:link {
+  text-decoration: none;
+  color: #00FFFF;
+  font-size: 1.5rem;
+  transition: font-size 0.5s;
+  transition-timing-function: linear;
+}
+a:visited {
+  text-decoration: none;
+  color: #00FFFF;
+  font-size: 1.5rem;
+  transition: font-size 2s;
+  transition-timing-function: linear;
+
+}
+a:hover {
+  text-decoration: none;
+  color: 	#008B8B;
+  font-size: 1.75rem;
+
+}
+a:active {
+  text-decoration: none;
+}

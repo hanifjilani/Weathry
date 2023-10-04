@@ -1,0 +1,71 @@
+html {
+  background-color: #FFFFCB;
+  overflow-x: hidden;
+  width: 100%;
+}
+.footerHeading {
+  font-size: 1.5rem;
+  color: rgb(184,115,51);
+  margin-bottom: 5px;
+}
+.footer {
+  font-family: 'Roboto', sans-serif;
+  width: 100vw;
+  height: 25vh;
+  position: absolute;
+  bottom: -20vh;
+  z-index: 10;
+  background-color: #9EB7E5;
+}
+.footer ul {
+  list-style: none;
+  margin-left: 45%;
+}
+.footer a {
+  color: #914D76;
+}
+.footer a:hover {
+  color: rgba(255,255,255,0.87);
+}
+.top {
+  margin-top: 25vh;
+}
+p {
+  font-family: 'Roboto Slab', serif;
+  color: #524632;
+}
+.navBarDiv {
+  margin-top: 5vh;
+  font-family: 'Roboto', sans-serif;
+  width: 100vw;
+  height: 10vh;
+  position: absolute;
+  top: 0;
+  z-index: 10;
+}
+.navBarDiv ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+}
+.navBarDiv ul a {
+  margin: 0 3vw;
+  text-decoration: none;
+  color: #8F7E4F;
+  transition: transform 0.5s;
+}
+.navBarDiv ul a:hover {
+  transform: scale(1.2);
+}
+@media only screen and (max-width: 480px) {
+  .top {
+    margin-top: 15vh;
+  }
+  .footer {
+    bottom: -15vh;
+    height: 20vh;
+  }
+  .footer ul {
+    margin-left: 35%;
+  }
+}
