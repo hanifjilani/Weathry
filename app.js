@@ -124,6 +124,6 @@ app.post("/", function(req,res){
   })
 })
 // Listen PORT 7001
-app.listen(7001, function() {
+app.listen(process.env.PORT || 7001, function() {
   console.log("Listening on port 7001");
 })
